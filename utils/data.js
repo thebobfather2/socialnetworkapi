@@ -1,118 +1,50 @@
-const names = [
-  'Aaran',
-  'Aaren',
-  'Aarez',
-  'Aarman',
-  'Aaron',
-  'Aaron-James',
-  'Aarron',
-  'Aaryan',
-  'Aaryn',
-  'Aayan',
-  'Aazaan',
-  'Abaan',
-  'Abbas',
-  'Abdallah',
-  'Abdalroof',
-  'Abdihakim',
-  'Abdirahman',
-  'Abdisalam',
-  'Abdul',
-  'Abdul-Aziz',
-  'Abdulbasir',
-  'Abdulkadir',
-  'Abdulkarem',
-  'Smith',
-  'Jones',
-  'Coollastname',
-  'enter_name_here',
-  'Ze',
-  'Zechariah',
-  'Zeek',
-  'Zeeshan',
-  'Zeid',
-  'Zein',
-  'Zen',
-  'Zendel',
-  'Zenith',
-  'Zennon',
-  'Zeph',
-  'Zerah',
-  'Zhen',
-  'Zhi',
-  'Zhong',
-  'Zhuo',
-  'Zi',
-  'Zidane',
-  'Zijie',
-  'Zinedine',
-  'Zion',
-  'Zishan',
-  'Ziya',
-  'Ziyaan',
-  'Zohaib',
-  'Zohair',
-  'Zoubaeir',
-  'Zubair',
-  'Zubayr',
-  'Zuriel',
-  'Xander',
-  'Jared',
-  'Courtney',
-  'Gillian',
-  'Clark',
-  'Jared',
-  'Grace',
-  'Kelsey',
-  'Tamar',
-  'Alex',
-  'Mark',
-  'Tamar',
-  'Farish',
-  'Sarah',
-  'Nathaniel',
-  'Parker',
-];
-
-const appDescriptions = [
-  'Decision Tracker',
-  'Find My Phone',
-  'Learn Piano',
-  'Starbase Defender',
-  'Tower Defense',
-  'Monopoly Money Manager',
-  'Movie trailers',
-  'Hello world',
-  'Stupid Social Media App',
-  'Notes',
-  'Messages',
-  'Email',
-  'Compass',
-  'Firefox',
-  'Running app',
-  'Cooking app',
-  'Poker',
-  'Deliveries',
-];
-
-// Get a random item given an array
-const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
-// Gets a random full name
-const getRandomName = () =>
-  `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
-
-// Function to generate random assignments that we can add to student object.
-const getRandomAssignments = (int) => {
-  const results = [];
-  for (let i = 0; i < int; i++) {
-    results.push({
-      assignmentName: getRandomArrItem(appDescriptions),
-      score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
-    });
+const userData = [
+  {
+      username: 'bap0006',
+      email: 'bryanandrewpike@gmail.com',
+      _id: '640a58b6adfc7126a813f7b6'
+  },
+  {
+      username: 'bob123',
+      email: 'bob123@mail.com',
+      _id: '61b6c468f27f350a154ebdc2'
+  },
+  {
+      username: 'Susan',
+      email: 'susan@yahoo.com',
+      _id: '61b6c468f27f350a154ebdf6'
   }
-  return results;
-};
+]
 
-// Export the functions for use in seed.js
-module.exports = { getRandomName, getRandomAssignments };
+const thoughtsData = [
+  {
+      _id: '640a58b6adfc7126a813f7b6',
+      thoughtText: "Homework is hard!",
+      username: "bap0006",
+      createdAt: "4/15/2023, 3:20:32 PM",
+      reactions: [
+          {
+              reactionBody: "Yes it sure is!",
+              username: "bob123"
+          }
+      ]
+  },
+  {
+      _id: '640a58b6adfc7126a813f7c2',
+      thoughtText: "Only one day left of class",
+      username: "bob123",
+      createdAt: "4/16/2023, 1:20:10 PM",
+      reactions: [
+          {
+              reactionBody: "Yay!",
+              username: "bap006"
+          },
+          {
+              reactionBody: "Let's gooo",
+              username: "Susan"
+          }
+      ]
+  },
+]
+
+module.exports = { userData, thoughtsData };
