@@ -1,5 +1,6 @@
 # Social Network API
 ![MIT](https://img.shields.io/badge/license-mit-blue)
+![socialapi](https://user-images.githubusercontent.com/107475188/232353259-522642ca-5781-45af-82f7-8a405342661c.png)
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
